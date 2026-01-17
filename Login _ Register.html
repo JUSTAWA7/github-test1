@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)file:///D:/Javoxir_pytho-24/dars1/index.html? -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Login / Register</title>
+    <link rel="stylesheet" href="./Login _ Register_files/style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="tabs">
+        <button class="tab active" onclick="showLogin()">Login</button>
+        <button class="tab" onclick="showRegister()">Register</button>
+    </div>
+
+    <!-- LOGIN -->
+    <form id="loginForm" class="form">
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password">
+
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- REGISTER -->
+    <form id="registerForm" class="form hidden">
+        <label>Username</label>
+        <input type="text" placeholder="Enter your username">
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email">
+
+        <label>Phone Number</label>
+        <input type="text" placeholder="Enter your phone">
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password">
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<script>
+function showLogin() {
+    document.getElementById("loginForm").classList.remove("hidden");
+    document.getElementById("registerForm").classList.add("hidden");
+    document.querySelectorAll(".tab")[0].classList.add("active");
+    document.querySelectorAll(".tab")[1].classList.remove("active");
+}
+
+function showRegister() {
+    document.getElementById("registerForm").classList.remove("hidden");
+    document.getElementById("loginForm").classList.add("hidden");
+    document.querySelectorAll(".tab")[1].classList.add("active");
+    document.querySelectorAll(".tab")[0].classList.remove("active");
+}
+</script>
+
+
+</body></html>
